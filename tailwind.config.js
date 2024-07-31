@@ -5,6 +5,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./*",
   ],
   prefix: "",
   theme: {
@@ -18,7 +19,7 @@ module.exports = {
       lg: "960px",
       xl: "1200px",
     },
-    fontfamily: {
+    fontFamily: {
       primary: "var(--font-jetbrainsMono)",
     },
     extend: {
