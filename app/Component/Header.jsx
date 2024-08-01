@@ -1,20 +1,24 @@
-import link from "next/link";
-import { button } from "./ul/button";
+"use client";
+
+import Link from "next/link";
+import { Button } from "./ul/button";
 import Nav from "./Nav";
+
 const Header = () => {
   return (
     <header className="py-8 xl:py-12 text-white ">
-      <div className="container mx-auto">header</div>
-      <link href="/">
-        <h1 className="text-5xl font-semibold">
-          Divyadharshana <span className="text-accent">.</span>
-        </h1>
-      </link>
-      <div className="hidden xl:flex">
-        <Nav />
-        <link href="/contact">
-          <Button>Hire me</Button>
-        </link>
+      <div className="container mx-auto">
+        <Link href="/">
+          <h1 className="text-5xl font-semibold">
+            Divyadharshana <span className="text-accent">.</span>
+          </h1>
+        </Link>
+        <div className="hidden xl:flex">
+          <Nav />
+          <Link href="/contact">
+            <Button>Hire me</Button>
+          </Link>
+        </div>
       </div>
     </header>
   );

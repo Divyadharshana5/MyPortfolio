@@ -34,5 +34,5 @@ module.exports = {
       animation: {},
     },
   },
-  plugins: [require("tailwind-animate")],
+  plugins: [require("tailwindcss-animate")],
 };
