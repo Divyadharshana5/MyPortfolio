@@ -7,12 +7,12 @@
 .yarn/install-state.gz
 
 # testing
-/coveragess
+/coverage
 
 # next.js
 /.next/
 /out/
-.env
+
 # production
 /build
 
