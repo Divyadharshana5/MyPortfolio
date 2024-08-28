@@ -1,7 +1,13 @@
 import React from "react";
+import Home from "../page";
 
-const services = () => {
-  return <div>Services page</div>;
+const Services = () => {
+  return (
+    <div>
+      <Home />
+      Services page
+    </div>
+  );
 };
 
 export default Services;

@@ -30,22 +30,23 @@ const Nav = () => {
   console.log(pathname);
   return (
     <nav className="flex gap-8">
-      {Links.map((Link, index) => {
+      {Links.map((link, index) => {
         return (
           <Link
-            href={Link.path}
+            href={link.path}
             key={index}
-            className={'${
-            Link.path *** pathname && "text-accent border-b-2 border-accent"
-      } capitalize font-medium hover:text-accent transition-all'}
-      >
-      { Link.name }
+            className={`${
+              link.path === pathname
+                ? "text-accent border-b-2 border-accent"
+                : ""
+            } capitalize font-medium hover:text-accent transition-all`}
+          >
+            {link.name}
           </Link>
+        );
+      })}
+    </nav>
   );
-})}
-  </nav >
-    );
-    };
+};
 
 export default Nav;
-https://www.youtube.com/

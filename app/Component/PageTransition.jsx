@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence } from "framer-notion";
+import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 const PageTransition = ({ children }) => {
   const pathname = usePathname();
