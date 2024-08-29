@@ -14,15 +14,15 @@ const Links = [
   },
   {
     name: "resume",
-    path: "/resume",
+    path: "/Resume",
   },
   {
     name: "work",
-    path: "/work",
+    path: "/Work",
   },
   {
     name: "contact",
-    path: "/contact",
+    path: "/Contact",
   },
 ];
 const Nav = () => {
