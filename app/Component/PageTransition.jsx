@@ -20,7 +20,6 @@ const PageTransition = ({ children }) => {
           }}
           className="h-screen m-screen fixed bg-primary top-0 pointer-events-none"
         />
-
         {children}
       </div>
     </AnimatePresence>
