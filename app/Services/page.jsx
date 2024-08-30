@@ -1,7 +1,5 @@
-import React from "react";
-
-const Services = () => {
-  return <div>Services page</div>;
+const Service = () => {
+  return <div>service page</div>;
 };
 
-export default Services;
+export default Service;
