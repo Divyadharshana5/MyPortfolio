@@ -1,16 +1,16 @@
-import { Button } from "./Component/ul/button.jsx";
+import { Button } from "./Component/ui/button.jsx";
 import { FiDownload } from "react-icons/fi";
 import Social from "./Component/Social";
 import Photo from "./Component/Photo";
 import Stats from "./Component/Stats";
 const Home = () => {
   return (
-    <section className="xl:px-20">
+    <section className="xl:px-20 px-5">
       <div className="">
         <div className="flex flex-col xl:flex-row items-center xl:gap-5 justify-between xl:pt-8 xl:pb-20">
           <div className="text-center flex xl:text-left flex-col gap-6">
             <span className="text-xl">Software Developer</span>
-            <p className=" text-7xl gap-3 flex flex-col font-bold  ">
+            <p className="text-4xl xl:text-7xl gap-3 flex flex-col font-bold  ">
               <span> Hello I&apos;m</span>
               <span className="text-accent ">Divyadharshana</span>
             </p>
