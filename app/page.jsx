@@ -1,4 +1,4 @@
-import { Button } from "./Component/ui/button.jsx";
+import { Button } from "./Component/ul/button.jsx";
 import { FiDownload } from "react-icons/fi";
 import Social from "./Component/Social";
 import Photo from "./Component/Photo";
