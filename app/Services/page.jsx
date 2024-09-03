@@ -52,7 +52,8 @@ const Service = () => {
                 key={index}
                 className="flex-1 flex flex-col justify-center gap-6 group"
               >
-                <div className="w-full flex justify-between items-center">
+                <div className="w-full flex justify-between items-center ">
+                  {/* {service.num} */}
                   <div className="text-5xl font-extrabold text-outline text-transparent">
                     {service.num}
                   </div>
