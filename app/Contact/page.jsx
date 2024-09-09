@@ -13,7 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../Component/ul/select";
-import { FaPhoneAlt, FaEnvelope, FaMapMarketAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const info = [
   {
@@ -27,7 +27,7 @@ const info = [
     description: "divyadharshana3@gmail.com",
   },
   {
-    icon: <FaMapMarketAlt />,
+    icon: <FaMapMarkerAlt />,
     title: "Address",
     description: "ABCD",
   },
@@ -54,10 +54,10 @@ const Contact = () => {
                 rem ullam delectus voluptatibus ex excepturi.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input type="firstname" placeholder="Firstname" />
-                <input type="lastname" placeholder="Lastname" />
-                <input type="email" placeholder="Email address" />
-                <input type="phone" placeholder="Phone Number" />
+                <Input type="firstname" placeholder="Firstname" />
+                <Input type="lastname" placeholder="Lastname" />
+                <Input type="email" placeholder="Email address" />
+                <Input type="phone" placeholder="Phone Number" />
               </div>
               <Select>
                 <SelectTrigger className="w-full">
