@@ -22,10 +22,7 @@ const about = {
       fieldName: "Name",
       fieldValue: "Divyadharshana",
     },
-    {
-      fieldName: "Phone",
-      fieldValue: "8489638949",
-    },
+
     {
       fieldName: "Experience",
       fieldValue: "1 year",
