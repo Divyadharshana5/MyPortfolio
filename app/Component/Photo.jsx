@@ -11,8 +11,8 @@ const Photo = () => {
         animate={{
           opacity: 1,
           transition: {
-            delay: 2,
-            duration: 0.4,
+            delay: 1,
+            duration: 0.2,
             ease: "easeIn",
           },
         }}
@@ -31,11 +31,11 @@ const Photo = () => {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/Pic.png"
+            src="/public/pic.png"
             property
             quality={100}
             fill
-            alt=""
+            alt="ramya"
             className="object-contain rounded-full "
           />
         </motion.div>
