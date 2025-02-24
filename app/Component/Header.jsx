@@ -11,7 +11,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
           <h3 className="xl:text-4xl text-lg font-semibold text-white">
-            Divyadharshana.P
+            Ramya.V
             {/* <span className="text-accent">.</span> */}
           </h3>
         </Link>
