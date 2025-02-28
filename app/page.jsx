@@ -12,7 +12,7 @@ const Home = () => {
             <span className="text-xl">Software Developer</span>
             <p className="text-4xl xl:text-7xl gap-3 flex flex-col font-bold  ">
               <span> Hello I&apos;m</span>
-              <span className="text-accent ">Ramya</span>
+              <span className="text-accent ">Divyadharshana</span>
             </p>
             <p className="max-w-[500px]  text-white ">
               I excel at crafting elegant digit experiences and I'm proficient

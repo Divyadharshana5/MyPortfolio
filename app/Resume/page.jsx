@@ -20,7 +20,7 @@ const about = {
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Ramya",
+      fieldValue: "Divyadharshana",
     },
 
     {
@@ -29,7 +29,7 @@ const about = {
     },
     {
       fieldName: "Skype",
-      fieldValue: "Ramya.01",
+      fieldValue: "Dharshana.01",
     },
     {
       fieldName: "Nationality",
@@ -37,7 +37,7 @@ const about = {
     },
     {
       fieldName: "Email",
-      fieldValue: "divyaramya1422@gmail.com",
+      fieldValue: "divyadharshana3@gmail.com.com",
     },
     {
       fieldName: "Freelance",
