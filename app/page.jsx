@@ -3,6 +3,7 @@ import { FiDownload } from "react-icons/fi";
 import Social from "./Component/Social";
 import Photo from "./Component/Photo";
 import Stats from "./Component/Stats";
+
 const Home = () => {
   return (
     <section className="xl:px-20 px-5">
