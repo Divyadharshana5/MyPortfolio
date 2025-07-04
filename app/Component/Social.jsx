@@ -1,24 +1,33 @@
-import Link from "next/link";
-
+"use client";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
-const socials = [
-  { icon: <FaGithub />, path: "" },
-  { icon: <FaLinkedinIn />, path: "" },
-  { icon: <FaTwitter />, path: "" },
-];
-const Social = ({ containerStyles, iconStyles }) => {
+export default function Social() {
   return (
-    <div className={containerStyles}>
-      {socials.map((item, index) => {
-        return (
-          <Link key={index} href={item.path} className={iconStyles}>
-            {item.icon}
-          </Link>
-        );
-      })}
+    <div className="flex gap-4">
+      <a
+        href="https://github.com/Divyadharshana5"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+      >
+        <FaGithub size={32} />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+      >
+        <FaLinkedinIn size={32} />
+      </a>
+      <a
+        href="https://twitter.com/YOUR_TWITTER_USERNAME"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Twitter"
+      >
+        <FaTwitter size={32} />
+      </a>
     </div>
   );
-};
-
-export default Social;
+}
