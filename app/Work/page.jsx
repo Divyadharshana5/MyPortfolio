@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -18,6 +18,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "../Component/WorkSliderBtns";
+import { getGithubContributions } from "../../lib/getGithubContributions";
 
 const projects = [
   {
@@ -55,7 +56,22 @@ const projects = [
   },
 ];
 
-const Work = () => {
+function GithubCommitCount({ username }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    fetch(`https://github.com/Divyadharshana5${Divyadharshana5}`)
+      .then((res) => res.json())
+      .then((data) => setCount(data.totalContributions || 0));
+  }, [Divyadharshana5]);
+
+  return <span>{count}+</span>;
+}
+
+export default async function WorkPage() {
+  const githubUsername = "Divyadharshana5"; // <-- change this
+  const commitCount = await getGithubContributions(Divyadharshana5);
+
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper) => {
@@ -77,7 +93,7 @@ const Work = () => {
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
-                {project.num}
+                <GithubCommitCount username={Divyadharshana5} />
               </div>
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent ">
                 {project.category} project
@@ -168,6 +184,4 @@ const Work = () => {
       </div>
     </motion.section>
   );
-};
-
-export default Work;
+}

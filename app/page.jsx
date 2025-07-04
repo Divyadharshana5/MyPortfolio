@@ -10,14 +10,17 @@ const Home = () => {
       <div className="">
         <div className="flex flex-col xl:flex-row items-center xl:gap-5 justify-between xl:pt-8 xl:pb-20">
           <div className="text-center flex xl:text-left flex-col gap-6">
-            <span className="text-xl">Software Developer</span>
+            <span className="text-xl">Fullstack developer</span>
             <p className="text-4xl xl:text-7xl gap-3 flex flex-col font-bold  ">
               <span> Hello I&apos;m</span>
               <span className="text-accent ">Divyadharshana</span>
             </p>
             <p className="max-w-[500px]  text-white ">
-              I excel at crafting elegant digit experiences and I'm proficient
-              in various programing languages and technologies.
+              Full-Stack Developer | Problem Solver | Tech Explorer Crafting
+              elegant frontends and powerful backends — I build seamless digital
+              experiences from pixel to production. With a passion for clean
+              code, scalable systems, and human-centered design, I turn ideas
+              into performant, user-friendly web applications.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-5">
               <Button
