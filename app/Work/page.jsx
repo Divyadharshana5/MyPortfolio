@@ -18,9 +18,6 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "../Component/WorkSliderBtns";
-import { getGithubContributions } from "../../lib/getGithubContributions";
-import GithubContributionCount from "../Component/GithubContributionCount";
-import GithubProjects from "../Component/GithubProjects";
 
 const projects = [
   {
@@ -61,18 +58,11 @@ const projects = [
 function GithubCommitCount({ username }) {
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    fetch(`https://github.com/Divyadharshana5${Divyadharshana5}`)
-      .then((res) => res.json())
-      .then((data) => setCount(data.totalContributions || 0));
-  }, [Divyadharshana5]);
-
   return <span>{count}+</span>;
 }
 
-export default async function WorkPage() {
-  const githubUsername = "Divyadharshana5"; // <-- change this
-  const commitCount = await getGithubContributions(Divyadharshana5);
+export default function WorkPage() {
+  const githubUsername = "YOUR_GITHUB_USERNAME"; // <-- change thi
 
   const [project, setProject] = useState(projects[0]);
 
@@ -94,10 +84,8 @@ export default async function WorkPage() {
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
-                <GithubContributionCount username="Divyadharshana5" />
-              </div>
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent ">
+              <div className="text-8xl leading-none font-extrabold text-transparent text-outline"></div>
+              <h2 className="text-[42px] font-bold leaDivyawhite group-hover:text-accent ">
                 {project.category} project
               </h2>
               <p className="text-white/60">{project.description}</p>
@@ -182,13 +170,6 @@ export default async function WorkPage() {
               />
             </Swiper>
           </div>
-        </div>
-        <div>
-          <h1>My GitHub Contributions</h1>
-          <GithubContributionCount username="Divyadharshana5" />
-        </div>
-        <div>
-          <GithubProjects username="Divyadharshana5" />
         </div>
       </div>
     </motion.section>
