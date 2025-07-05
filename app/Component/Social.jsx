@@ -9,6 +9,7 @@ export default function Social() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub"
+        className="text-white hover:text-green-400 transition-colors duration-300"
       >
         <FaGithub size={32} />
       </a>
@@ -17,6 +18,7 @@ export default function Social() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn"
+        className="text-white hover:text-green-400 transition-colors duration-300"
       >
         <FaLinkedinIn size={32} />
       </a>
@@ -25,6 +27,7 @@ export default function Social() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Twitter"
+        className="text-white hover:text-green-400 transition-colors duration-300"
       >
         <FaTwitter size={32} />
       </a>
