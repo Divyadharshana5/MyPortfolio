@@ -5,9 +5,9 @@ import Link from "next/link";
 const service = [
   {
     num: "01",
-    title: "Web Development",
+    title: "Full‑Stack Web Application Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium voluptate harum obcaecati odio sapiente aliquid sunt expedita.",
+      "Design and implement responsive web applications using React or Next.js on the frontend, and Node.js or Go on the backend. I build clean architectures, integrate databases like MongoDB or PostgreSQL, and deliver solid, user-friendly digital solutions.",
     href: "",
   },
   {
