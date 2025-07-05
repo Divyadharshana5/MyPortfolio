@@ -12,9 +12,9 @@ const service = [
   },
   {
     num: "02",
-    title: "UI/UX Design",
+    title: " Social-Web Browser Extension & Web Recommendation",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium voluptate harum obcaecati odio sapiente aliquid sunt expedita.",
+      "Build interactive browser extensions like your Social‑Browser‑Extension project that deliver personalized content recommendations and enhance user browsing experiences. Skilled in frontend technologies (JavaScript, HTML, CSS) and background scripting, I bring seamless functionality to browser tools.",
     href: "",
   },
   {
