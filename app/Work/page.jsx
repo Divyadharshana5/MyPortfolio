@@ -23,46 +23,40 @@ const projects = [
   {
     num: "01",
     category: "frontend",
-    title: "project 1",
+    title: "Ice_Cream-Parlor-website",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis adipisci eveniet repudiandae veniam. Error, magni",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/react1.png",
     live: "",
-    github: "",
+    github: "https://github.com/Divyadharshana5/Ice_cream-parlour-website.git",
   },
   {
     num: "02",
     category: "fullstack",
-    title: "project 2",
+    title: "Estate_App",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis adipisci eveniet repudiandae veniam. Error, magni",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
     image: "/react2.png",
     live: "",
-    github: "",
+    github: "https://github.com/Divyadharshana5/Estate_App.git",
   },
   {
     num: "03",
     category: "frontend",
-    title: "project 3",
+    title: "Travel-website",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis adipisci eveniet repudiandae veniam. Error, magni",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css 3" }],
     image: "/react3.png",
     live: "",
-    github: "",
+    github: "https://github.com/Divyadharshana5/Travel-website.git",
   },
 ];
 
-function GithubCommitCount({ username }) {
-  const [count, setCount] = useState(0);
-
-  return <span>{count}+</span>;
-}
-
 export default function WorkPage() {
-  const githubUsername = "YOUR_GITHUB_USERNAME"; // <-- change thi
+  const githubUsername = "Divyadharshana5"; // <-- GitHub username only
 
   const [project, setProject] = useState(projects[0]);
 
@@ -119,7 +113,11 @@ export default function WorkPage() {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={project.github}>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger
@@ -132,11 +130,11 @@ export default function WorkPage() {
                         />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Github repository</p>
+                        <p>Visit GitHub Profile</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
