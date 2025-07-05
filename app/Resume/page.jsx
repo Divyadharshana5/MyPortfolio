@@ -57,7 +57,7 @@ const experience = {
     "Final-year student at JEC, gaining hands-on experience by working on real-time frontend projects. Building responsive user interfaces using React.js, Tailwind CSS, and integrating APIs to deliver smooth user experiences in a fast-paced startup environment.",
   items: [
     {
-      company: "Startup.",
+      company: "Startup",
       position: "Front-End Developer Intern",
       duration: "2025-present",
     },
@@ -73,27 +73,27 @@ const education = {
   icon: "/assests/resume/cap.svg",
   title: "My education",
   desription:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime tempore nesciunt unde saepe modi, neque dolor ratione.",
+    "As a passionate and fast-learning Computer Science student, I’ve consistently challenged myself beyond the classroom by working on real-world projects, internships, and hackathons. My education at JEC has provided a strong foundation in data structures, web technologies, and software engineering principles—complemented by my curiosity to explore new tools and frameworks on my own.",
   items: [
     {
-      institution: "Online Course Platform",
-      degree: "Full Stack Web Development",
-      duration: "2024",
+      institution: "Government Girls High School,ManavalaNagar",
+      degree: "10th(85%)",
+      duration: "2020",
     },
     {
-      institution: "Codecademy",
-      degree: "Front-end-Track",
-      duration: "2024",
+      institution: "Rmjain govt. girls school,Thiruvallur",
+      degree: "11th-12th(80%)",
+      duration: "2021-2022",
     },
     {
-      institution: "Online Course",
-      degree: "Programming Course",
-      duration: "2023",
+      institution: "Jaya Engineering College",
+      degree: "BE-CSE",
+      duration: "2022-2026",
     },
     {
-      institution: "Tech Institute",
-      degree: "Certified Web Developer",
-      duration: "2023",
+      institution: "Startup",
+      degree: "Frontend Developer Intern",
+      duration: "2025-Present",
     },
   ],
 };
