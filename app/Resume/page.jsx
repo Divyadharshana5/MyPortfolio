@@ -57,24 +57,14 @@ const experience = {
     "Final-year student at JEC, gaining hands-on experience by working on real-time frontend projects. Building responsive user interfaces using React.js, Tailwind CSS, and integrating APIs to deliver smooth user experiences in a fast-paced startup environment.",
   items: [
     {
-      company: "Tech-Solutions-Inc.",
-      position: "Full Stack Developer",
-      duration: "2023-present",
-    },
-    {
-      company: "Web-Design-Studio",
+      company: "Startup.",
       position: "Front-End Developer Intern",
-      duration: "Summer-2022",
+      duration: "2025-present",
     },
     {
-      company: "E-Commerce Startup",
-      position: "Freelance Web Developer",
-      duration: "2022",
-    },
-    {
-      company: "Tech Acadamey",
-      position: "Teaching Assistant",
-      duration: "2022-2023",
+      company: "IIT Jammu",
+      position: "Smart India Hackathon",
+      duration: "Winter-2024",
     },
   ],
 };
