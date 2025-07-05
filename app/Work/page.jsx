@@ -22,10 +22,10 @@ import WorkSliderBtns from "../Component/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "Frontend",
     title: "Ice_Cream-Parlor-website",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis adipisci eveniet repudiandae veniam. Error, magni",
+      "The Ice Cream Parlor Website is a fully responsive and visually engaging frontend project built using HTML, CSS, and JavaScript. It features a clean homepage with a welcoming hero section, an interactive menu showcasing various ice cream flavors, and a smooth, user-friendly layout across all devices. The website includes subtle animations, smooth scrolling, and a working contact form with basic validation powered by JavaScript. This project helped me strengthen my frontend fundamentals, improve my UI/UX design sense, and practice DOM manipulation without relying on frameworks. It's a great example of how creative design and pure frontend skills can bring a brand to life online.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/react1.png",
     live: "",
@@ -33,23 +33,23 @@ const projects = [
   },
   {
     num: "02",
-    category: "fullstack",
+    category: "Fullstack",
     title: "Estate_App",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis adipisci eveniet repudiandae veniam. Error, magni",
+      "The Estate App is a full-stack real estate platform built using React.js, Node.js, and Tailwind CSS, designed to simplify property browsing, listing, and management. The frontend offers a clean and responsive UI where users can explore properties, filter based on preferences, and view detailed listings. On the backend, the app uses Node.js and Express to handle routing, user authentication, and data management through RESTful APIs. This project also includes features like secure login, property uploads, user dashboards, and real-time form validation. Working on this application enhanced my understanding of full-stack architecture, API integration, and building production-ready UI with Tailwind CSS. It showcases my ability to create dynamic, data-driven web apps from scratch.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/react2.png",
+    image: "/react3.png",
     live: "",
     github: "https://github.com/Divyadharshana5/Estate_App.git",
   },
   {
     num: "03",
-    category: "frontend",
+    category: "Frontend",
     title: "Travel-website",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis adipisci eveniet repudiandae veniam. Error, magni",
+      "The Travel Website is a fully responsive and visually immersive frontend project developed using HTML, Tailwind CSS, and JavaScript. Designed to inspire exploration, it features a modern landing page, interactive destination cards, smooth navigation, and call-to-action sections for bookings and travel plans. Tailwind CSS was used to build a clean, mobile-first UI with elegant spacing, gradients, and hover effects, while JavaScript added interactivity like dynamic sliders, responsive menus, and form validation. This project enhanced my skills in building real-world UI components, organizing clean code, and creating user-focused experiences in the travel domain.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css 3" }],
-    image: "/react3.png",
+    image: "/react2.png",
     live: "",
     github: "https://github.com/Divyadharshana5/Travel-website.git",
   },
@@ -72,12 +72,12 @@ export default function WorkPage() {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      className="min-h-[80vh] flex flex-col justify-start py-12 xl:px-0"
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
+          <div className="w-full xl:w-[50%] xl:h-[520px] flex flex-col xl:justify-between order-2 xl:order-none">
+            <div className="flex flex-col gap-[30px] h-[100%]">
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline"></div>
               <h2 className="text-[42px] font-bold leaDivyawhite group-hover:text-accent ">
                 {project.category} project
@@ -148,14 +148,16 @@ export default function WorkPage() {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                    <div className="h-[520px] relative group flex justify-center items-center bg-pink-50/20 rounded-lg overflow-hidden">
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       <div className="relative w-full h-full">
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover"
-                          alt=""
+                          className="object-cover rounded-lg"
+                          style={{ objectPosition: "center 30%" }}
+                          alt={project.title}
+                          priority={index === 0}
                         />
                       </div>
                     </div>
