@@ -26,9 +26,9 @@ const service = [
   },
   {
     num: "04",
-    title: "SEO",
+    title: " Deployment, CI/CD & Performance Tuning",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium voluptate harum obcaecati odio sapiente aliquid sunt expedita.",
+      "Deployed apps using Vercel, Render, and Netlify with optimized builds and CI/CD workflows. Applied lazy loading, bundle analysis, and Lighthouse audits to enhance speed & SEO. Focused on HTTPS, JWT security, and 404 fallback routing.",
     href: "",
   },
 ];
