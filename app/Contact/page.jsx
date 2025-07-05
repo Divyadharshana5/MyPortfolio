@@ -14,6 +14,8 @@ import {
   SelectValue,
 } from "../Component/ul/select";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const info = [
   {
@@ -32,15 +34,16 @@ const info = [
     description: "ABCD",
   },
 ];
-import { motion } from "framer-motion";
 
 const Contact = () => {
+  const [result, setResult] = React.useState("");
+
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "afda82bf-7406-4b80-90e6-4a36e9b02c9f");
+    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -51,12 +54,11 @@ const Contact = () => {
 
     if (data.success) {
       setResult("");
-      toast.success("Form Submitted Successfully");
+      alert("Form Submitted Successfully");
       event.target.reset();
     } else {
       console.log("Error", data);
-      toast.error(data.message);
-      setResult("");
+      setResult();
     }
   };
 
@@ -84,31 +86,69 @@ const Contact = () => {
                 feel free to reach out!
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email address" />
-                <Input type="phone" placeholder="Phone Number" />
+                <Input
+                  type="text"
+                  name="firstname"
+                  placeholder="Firstname"
+                  value={formData.firstname}
+                  onChange={handleInputChange}
+                />
+                <Input
+                  type="text"
+                  name="lastname"
+                  placeholder="Lastname"
+                  value={formData.lastname}
+                  onChange={handleInputChange}
+                />
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Email address"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                />
+                <Input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                />
               </div>
-              <Select>
+              <Select
+                onValueChange={(value) =>
+                  setFormData((prev) => ({ ...prev, service: value }))
+                }
+              >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">UI/UX Design</SelectItem>
-                    <SelectItem value="mst">Logo Design</SelectItem>
-                    <SelectItem value="mht">Github Issues</SelectItem>
+                    <SelectItem value="Web Development">
+                      Web Development
+                    </SelectItem>
+                    <SelectItem value="UI/UX Design">UI/UX Design</SelectItem>
+                    <SelectItem value="Logo Design">Logo Design</SelectItem>
+                    <SelectItem value="Github">Github Issues</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
               <Textarea
+                name="message"
                 classname="h-[200px]"
                 placeholder="Type your message here."
+                value={formData.message}
+                onChange={handleInputChange}
               />
-              <Button size="md" className="max-w-40">
-                Send message
+              <Button
+                type="submit"
+                size="md"
+                className="max-w-40"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send message"}
               </Button>
             </form>
           </div>
