@@ -101,7 +101,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime tempore nesciunt unde saepe modi, neque dolor ratione.",
+    "I’m a smart and fast learner with a strong passion for building clean, responsive, and user-friendly web applications. My core strength lies in frontend development using React.js, Tailwind CSS, HTML, CSS, and JavaScript. I'm currently expanding my skills into full-stack development by learning Node.js, Express.js, and MongoDB. I enjoy solving logical problems and quickly adapting to new tools and technologies. I’ve also been selected for Smart India Hackathon 2024 at IIT Jammu, which boosted my ability to collaborate and build real-time solutions under pressure. I’m comfortable working with tools like Git, GitHub, Figma, and deploying projects on Vercel.",
   skillList: [
     {
       icon: <FaHtml5 />,
