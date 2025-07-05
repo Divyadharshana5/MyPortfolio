@@ -16,16 +16,16 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 const about = {
   title: "About me",
   describe:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime tempore nesciunt unde saepe modi, neque dolor ratione.",
+    "I'm a smart and fast learner with a strong passion for tech and creativity. As a frontend developer skilled in React.js, Tailwind CSS, and solid math logic, I’m currently expanding into backend development to become a complete full-stack developer. I represented my college at Smart India Hackathon 2024 held at IIT Jammu, and I actively participate in hackathons to sharpen my skills.Beyond coding, I love dancing, singing, and diving deep into crime investigation stories—driven by a long-term dream of becoming an IAS officer. I'm always curious, always building, and always learning.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Divyadharshana",
+      fieldValue: "Divyadharshana P",
     },
 
     {
       fieldName: "Experience",
-      fieldValue: "1 year",
+      fieldValue: "Fresher",
     },
     {
       fieldName: "Skype",
@@ -37,7 +37,7 @@ const about = {
     },
     {
       fieldName: "Email",
-      fieldValue: "divyadharshana3@gmail.com.com",
+      fieldValue: "divyadharshana3@gmail.com",
     },
     {
       fieldName: "Freelance",
@@ -45,7 +45,7 @@ const about = {
     },
     {
       fieldName: "Languages",
-      fieldValue: "English,Tamil",
+      fieldValue: "English,Tamil,Malayalam",
     },
   ],
 };
