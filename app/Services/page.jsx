@@ -19,9 +19,9 @@ const service = [
   },
   {
     num: "03",
-    title: "Logo Design",
+    title: " Custom eCommerce Web Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium voluptate harum obcaecati odio sapiente aliquid sunt expedita.",
+      "Build end-to-end eCommerce platforms tailored to specific business needs. From product listings, cart functionalities, and secure user authentication to seamless checkout systems, I develop responsive and scalable apps using the MERN stack (MongoDB, Express, React, Node.js).",
     href: "",
   },
   {
