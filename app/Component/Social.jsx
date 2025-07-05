@@ -13,7 +13,7 @@ export default function Social() {
         <FaGithub size={32} />
       </a>
       <a
-        href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME"
+        href="https://www.linkedin.com/in/divyadharshana5"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn"
