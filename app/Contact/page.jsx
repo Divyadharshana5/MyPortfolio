@@ -50,8 +50,10 @@ const Contact = () => {
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-accent">Let's work together</h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-                rem ullam delectus voluptatibus ex excepturi.
+                I'm always open to discussing new projects, creative ideas, or
+                opportunities to be part of your vision. Whether you have a
+                question, collaboration in mind, or just want to say hello —
+                feel free to reach out!
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="firstname" placeholder="Firstname" />
@@ -69,6 +71,7 @@ const Contact = () => {
                     <SelectItem value="est">Web Development</SelectItem>
                     <SelectItem value="cst">UI/UX Design</SelectItem>
                     <SelectItem value="mst">Logo Design</SelectItem>
+                    <SelectItem value="mht">Github Issues</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
