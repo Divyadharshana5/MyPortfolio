@@ -54,7 +54,7 @@ const experience = {
   icon: "/assests/resume/badge.svg",
   title: "My experience",
   desription:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime tempore nesciunt unde saepe modi, neque dolor ratione.",
+    "Final-year student at JEC, gaining hands-on experience by working on real-time frontend projects. Building responsive user interfaces using React.js, Tailwind CSS, and integrating APIs to deliver smooth user experiences in a fast-paced startup environment.",
   items: [
     {
       company: "Tech-Solutions-Inc.",
