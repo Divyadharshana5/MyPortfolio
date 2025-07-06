@@ -1,25 +1,40 @@
 "use client";
+import { useEffect, useState } from "react";
 import Countup from "react-countup";
-const stats = [
-  {
-    num: 1,
-    text: "Year of experience",
-  },
-  {
-    num: 20,
-    text: "Projects completed",
-  },
-  {
-    num: 5,
-    text: "Technologies mastered",
-  },
-  {
-    num: 1100,
-    text: "Code commits",
-  },
-];
 
 const Stats = () => {
+  const [commits, setCommits] = useState(null);
+  const stats = [
+    {
+      num: 1,
+      text: "Year of experience",
+    },
+    {
+      num: 20,
+      text: "Projects completed",
+    },
+    {
+      num: 5,
+      text: "Technologies mastered",
+    },
+    {
+      num: commits,
+      text: "Code commits",
+    },
+  ];
+
+  useEffect(() => {
+    const getCommits = async () => {
+      const res = await fetch("/api/total-commits");
+      const data = await res.json();
+      setCommits(data.totalCommits);
+    };
+
+    getCommits();
+  }, []);
+
+  console.log("commits", commits);
+
   return (
     <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
       <div className="container mx-auto">
