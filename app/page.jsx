@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "./Component/ul/button.jsx";
 import { FiDownload } from "react-icons/fi";
 import Social from "./Component/Social";
@@ -5,6 +6,16 @@ import Photo from "./Component/Photo";
 import Stats from "./Component/Stats";
 
 const Home = () => {
+  const handleDownload = () => {
+    const a = document.createElement("a");
+    a.href = "/Dharshana_Resume.pdf";
+    a.setAttribute("download", "Dharshana_Resume.pdf");
+    a.style.display = "none";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+
   return (
     <section className="xl:px-20 px-5">
       <div className="">
@@ -26,6 +37,7 @@ const Home = () => {
               <Button
                 variant="outline"
                 size="lg"
+                onClick={handleDownload}
                 className="uppercase flex items-center gap-4 text-accent hover:text-white rounded-full"
               >
                 <span>Download CV</span>
