@@ -27,7 +27,7 @@ const Stats = () => {
     const getCommits = async () => {
       const res = await fetch("/api/total-commits");
       const data = await res.json();
-      setCommits(data.totalCommits);
+      setCommits(data.totalLastYear);
     };
 
     getCommits();
