@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { Button } from "../Component/ul/button";
 import { Input } from "../Component/ul/input";
 import { Textarea } from "../Component/ul/textarea";
@@ -14,7 +15,6 @@ import {
   SelectValue,
 } from "../Component/ul/select";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { useState } from "react";
 import { motion } from "framer-motion";
 
 const info = [
@@ -37,13 +37,16 @@ const info = [
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
-
+  const [formData, setFormData] = React.useState({
+    firstname: "",
+    lastname: "",
+  });
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("access_key", "afda82bf-7406-4b80-90e6-4a36e9b02c9f");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -58,8 +61,16 @@ const Contact = () => {
       event.target.reset();
     } else {
       console.log("Error", data);
-      setResult();
+      alert(data.message);
+      setResult("");
     }
+  };
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   return (
@@ -108,7 +119,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                 />
                 <Input
-                  type="tel"
+                  type="number"
                   name="phone"
                   placeholder="Phone Number"
                   value={formData.phone}
@@ -142,13 +153,8 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleInputChange}
               />
-              <Button
-                type="submit"
-                size="md"
-                className="max-w-40"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "Sending..." : "Send message"}
+              <Button type="submit" size="md" className="max-w-40">
+                {result ? result : "Send Message"}
               </Button>
             </form>
           </div>
