@@ -21,7 +21,7 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "phone",
-    description: "+91 9445000902",
+    description: "+91 8489638949",
   },
   {
     icon: <FaEnvelope />,
@@ -31,7 +31,7 @@ const info = [
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description: "ABCD",
+    description: "Chennai, Tamil Nadu, India",
   },
 ];
 
