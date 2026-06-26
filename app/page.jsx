@@ -27,11 +27,10 @@ const Home = () => {
               <span className="text-accent ">Divyadharshana</span>
             </p>
             <p className="max-w-[500px]  text-white ">
-              Full-Stack Developer | Problem Solver | Tech Explorer Crafting
-              elegant frontends and powerful backends — I build seamless digital
-              experiences from pixel to production. With a passion for clean
-              code, scalable systems, and human-centered design, I turn ideas
-              into performant, user-friendly web applications.
+             Full-Stack Developer | Java | MERN | Problem Solver | Tech Explorer
+Crafting scalable web applications with clean code, strong backend logic, and intuitive user experiences. I build end-to-end digital solutions using Java, Spring Boot, REST APIs, MongoDB, Express, React, Node.js, and modern frontend technologies, with a focus on performance, maintainability, and user-centered design. Passionate about learning new technologies and turning ideas into reliable, impactful products.
+
+
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-5">
               <Button
