@@ -4,6 +4,7 @@ import Header from "./Component/Header";
 import PageTransition from "./Component/PageTransition";
 import StairTransition from "./Component/StairTransition";
 import Cursor from "./Component/Cursor";
+import BackgroundAnimation from "./Component/BackgroundAnimation";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} ${jetbrainsMono.variable}`}>
+        <BackgroundAnimation />
         <Cursor />
         <Header />
         <StairTransition />
