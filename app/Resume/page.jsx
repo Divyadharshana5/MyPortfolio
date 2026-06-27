@@ -28,10 +28,7 @@ const about = {
       fieldName: "Experience",
       fieldValue: "Fresher",
     },
-    {
-      fieldName: "Skype",
-      fieldValue: "Dharshana.01",
-    },
+    
     {
       fieldName: "Nationality",
       fieldValue: "Indian",
@@ -100,10 +97,24 @@ const education = {
   ],
 };
 
+const extracurricular = {
+  icon: "/assests/resume/badge.svg",
+  title: "My extracurricular",
+  desription:
+    "Beyond academics and tech, I'm passionate about mentoring and teaching. I help students strengthen their foundations through personalized guidance.",
+  items: [
+    {
+      company: "Teaching",
+      position: "Maths Tutor - CBSE (10th, 11th, 12th)",
+      duration: "Ongoing",
+    },
+  ],
+};
+
 const skills = {
   title: "My skills",
   description:
-    "I’m a smart and fast learner with a strong passion for building clean, responsive, and user-friendly web applications. My core strength lies in frontend development using React.js, Tailwind CSS, HTML, CSS, and JavaScript. I'm currently expanding my skills into full-stack development by learning Node.js, Express.js, and MongoDB. I enjoy solving logical problems and quickly adapting to new tools and technologies. I’ve also been selected for Smart India Hackathon 2024 at IIT Jammu, which boosted my ability to collaborate and build real-time solutions under pressure. I’m comfortable working with tools like Git, GitHub, Figma, and deploying projects on Vercel.",
+    "I’m a smart and fast learner with a strong passion for building clean, responsive, and user-friendly web applications. My core strength lies in frontend development using React.js, Tailwind CSS, HTML, CSS,Java, SQL, Github, Springboot and JavaScript. I'm currently expanding my skills into full-stack development by learning Node.js, Express.js, and MongoDB. I enjoy solving logical problems and quickly adapting to new tools and technologies. I’ve also been selected for Smart India Hackathon 2024 at IIT Jammu, which boosted my ability to collaborate and build real-time solutions under pressure. I’m comfortable working with tools like Git, GitHub, Figma, and deploying projects on Vercel.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -226,6 +237,29 @@ const Resume = () => {
                 className={`group relative flex flex-col gap-3 pl-12 sm:w-1/2 sm:pl-0 ${(idx + education.items.length) % 2 === 0 ? 'sm:pr-12 sm:text-right sm:mr-auto' : 'sm:pl-12 sm:ml-auto'}`}
               >
                 <span className={`absolute top-1.5 h-4 w-4 rounded-full border-2 transition-all duration-500 left-[11px] bg-[#030305] border-accent shadow-[0_0_15px_rgba(0,255,153,0.5)] ${(idx + education.items.length) % 2 === 0 ? 'sm:left-auto sm:-right-2' : 'sm:-left-2'}`} />
+                <span className="font-mono text-3xl font-bold text-zinc-700 group-hover:grad-text transition-all duration-500">
+                  {item.duration}
+                </span>
+                <h3 className="text-lg font-semibold text-white group-hover:text-accent transition-colors">
+                  {item.position}
+                </h3>
+                <p className="text-sm leading-relaxed text-zinc-400">
+                  {item.company}
+                </p>
+              </motion.div>
+            ))}
+
+            {/* Extracurricular Items */}
+            {extracurricular.items.map((item, idx) => (
+              <motion.div 
+                key={`extra-${idx}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className={`group relative flex flex-col gap-3 pl-12 sm:w-1/2 sm:pl-0 ${(idx + education.items.length + experience.items.length) % 2 === 0 ? 'sm:pr-12 sm:text-right sm:mr-auto' : 'sm:pl-12 sm:ml-auto'}`}
+              >
+                <span className={`absolute top-1.5 h-4 w-4 rounded-full border-2 transition-all duration-500 left-[11px] bg-[#030305] border-accent shadow-[0_0_15px_rgba(0,255,153,0.5)] ${(idx + education.items.length + experience.items.length) % 2 === 0 ? 'sm:left-auto sm:-right-2' : 'sm:-left-2'}`} />
                 <span className="font-mono text-3xl font-bold text-zinc-700 group-hover:grad-text transition-all duration-500">
                   {item.duration}
                 </span>
