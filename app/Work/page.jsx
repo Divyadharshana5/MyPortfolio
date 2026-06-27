@@ -23,152 +23,152 @@ const projects = [
   {
     num: "01",
     category: "Frontend",
-    title: "Ice_Cream-Parlor-website",
+    title: "Ice Cream Parlor",
     description:
-      "The Ice Cream Parlor Website is a fully responsive and visually engaging frontend project built using HTML, CSS, and JavaScript. It features a clean homepage with a welcoming hero section, an interactive menu showcasing various ice cream flavors, and a smooth, user-friendly layout across all devices. The website includes subtle animations, smooth scrolling, and a working contact form with basic validation powered by JavaScript. This project helped me strengthen my frontend fundamentals, improve my UI/UX design sense, and practice DOM manipulation without relying on frameworks. It's a great example of how creative design and pure frontend skills can bring a brand to life online.",
+      "A fully responsive and visually engaging frontend project built using HTML, CSS, and JavaScript. Features a clean homepage, interactive menu, and a smooth, user-friendly layout.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/react1.png",
     live: "",
     github: "https://github.com/Divyadharshana5/Ice_cream-parlour-website.git",
+    file: "IceCreamParlor.jsx"
   },
   {
     num: "02",
     category: "Fullstack",
-    title: "Estate_App",
+    title: "Estate App",
     description:
-      "The Estate App is a full-stack real estate platform built using React.js, Node.js, and Tailwind CSS, designed to simplify property browsing, listing, and management. The frontend offers a clean and responsive UI where users can explore properties, filter based on preferences, and view detailed listings. On the backend, the app uses Node.js and Express to handle routing, user authentication, and data management through RESTful APIs. This project also includes features like secure login, property uploads, user dashboards, and real-time form validation. Working on this application enhanced my understanding of full-stack architecture, API integration, and building production-ready UI with Tailwind CSS. It showcases my ability to create dynamic, data-driven web apps from scratch.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
+      "A full-stack real estate platform designed to simplify property browsing, listing, and management. Features user authentication, detailed listings, and data management through RESTful APIs.",
+    stack: [{ name: "Next.js" }, { name: "Tailwind" }, { name: "Node.js" }],
     image: "/react3.png",
     live: "",
     github: "https://github.com/Divyadharshana5/Estate_App.git",
+    file: "EstateApp.jsx"
   },
   {
     num: "03",
     category: "Frontend",
-    title: "Travel-website",
+    title: "Travel Website",
     description:
-      "The Travel Website is a fully responsive and visually immersive frontend project developed using HTML, Tailwind CSS, and JavaScript. Designed to inspire exploration, it features a modern landing page, interactive destination cards, smooth navigation, and call-to-action sections for bookings and travel plans. Tailwind CSS was used to build a clean, mobile-first UI with elegant spacing, gradients, and hover effects, while JavaScript added interactivity like dynamic sliders, responsive menus, and form validation. This project enhanced my skills in building real-world UI components, organizing clean code, and creating user-focused experiences in the travel domain.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css 3" }],
+      "A visually immersive frontend project designed to inspire exploration. Features a modern landing page, interactive destination cards, smooth navigation, and call-to-action sections.",
+    stack: [{ name: "Next.js" }, { name: "Tailwind" }],
     image: "/react2.png",
     live: "",
     github: "https://github.com/Divyadharshana5/Travel-website.git",
+    file: "TravelWebsite.jsx"
   },
 ];
 
 export default function WorkPage() {
-  const githubUsername = "Divyadharshana5"; // <-- GitHub username only
+  const [activeProject, setActiveProject] = useState(projects[0]);
 
-  const [project, setProject] = useState(projects[0]);
-
-  const handleSlideChange = (swiper) => {
-    const currentIndex = swiper.activeIndex;
-
-    setProject(projects[currentIndex]);
-  };
   return (
     <motion.section
       initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-      }}
-      className="min-h-[80vh] flex flex-col justify-start py-12 xl:px-0"
+      animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.4 } }}
+      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-20 px-5"
     >
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div className="w-full xl:w-[50%] xl:h-[520px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[100%]">
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline"></div>
-              <h2 className="text-[42px] font-bold leaDivyawhite group-hover:text-accent ">
-                {project.category} project
-              </h2>
-              <p className="text-white/60">{project.description}</p>
-              <ul className="flex gap-4">
-                {project.stack.map((item, index) => {
-                  return (
-                    <li key={index} className="text-xl text-accent">
-                      {item.name}
-                      {index !== project.stack.length - 1 && ","}
-                    </li>
-                  );
-                })}
-              </ul>
-              <div className="border border-white/20"></div>
-              <div className="flex items-center gap-4">
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger
-                        className="w-[70px] h-[70px] rounded-full
-                    bg-white/5 flex justify-center items-center group"
-                      >
-                        <BsArrowUpRight
-                          className="text-white text-3xl
-                      group-hover:text-accent"
-                        />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger
-                        className="w-[70px] h-[70px] rounded-full
-                    bg-white/5 flex justify-center items-center group"
-                      >
-                        <BsGithub
-                          className="text-white text-3xl
-                      group-hover:text-accent"
-                        />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Visit GitHub Profile</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </a>
+      <div className="w-full">
+        <div className="mb-8 animate-fade-up">
+          <p className="font-mono text-sm tracking-wide text-accent uppercase mb-2">Featured Work</p>
+          <h2 className="text-4xl xl:text-5xl font-bold text-white tracking-tight">Products, not just code</h2>
+        </div>
+
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#08080c] shadow-2xl flex flex-col h-[700px] animate-fade-up" style={{ animationDelay: '200ms' }}>
+          
+          {/* IDE Header */}
+          <div className="flex h-10 items-center justify-between border-b border-white/10 bg-[#030305] px-4 select-none">
+            <div className="flex items-center gap-2">
+              <span className="h-3 w-3 rounded-full bg-[#ff5f56]"></span>
+              <span className="h-3 w-3 rounded-full bg-[#ffbd2e]"></span>
+              <span className="h-3 w-3 rounded-full bg-[#27c93f]"></span>
+            </div>
+            <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest hidden sm:block">IDE — Project Workspace</span>
+            <div className="w-12 hidden sm:block"></div>
+          </div>
+
+          <div className="flex flex-1 overflow-hidden">
+            {/* Sidebar Explorer */}
+            <div className="w-64 border-r border-white/10 bg-[#030305] overflow-y-auto hidden md:block">
+              <div className="p-3 font-mono text-[11px] uppercase tracking-wider text-zinc-500 font-bold border-b border-white/10">Explorer</div>
+              <div className="p-2 space-y-1">
+                <div className="flex items-center gap-1.5 py-1 px-2 font-mono text-xs text-zinc-400">
+                  📂 Projects
+                </div>
+                <div className="pl-5 space-y-0.5 border-l border-white/10 ml-3.5">
+                  {projects.map((proj, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveProject(proj)}
+                      className={`w-full flex items-center py-1.5 px-2 font-mono text-xs text-left rounded-md transition-all ${activeProject.num === proj.num ? "bg-accent/15 text-white shadow-[0_0_10px_-2px_rgba(0,255,153,0.2)]" : "text-zinc-500 hover:text-zinc-300 hover:bg-white/5"}`}
+                    >
+                      <span className="text-accent-cyan text-[9px] font-bold border border-accent-cyan/20 px-1 rounded bg-accent-cyan/5 mr-2 shrink-0">JSX</span>
+                      <span className="truncate">{proj.title}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-full xl:w-[50%]">
-            <Swiper
-              spaceBetween={30}
-              slidesPerView={1}
-              className="xl:h-[520px] mb-12"
-              onSlideChange={handleSlideChange}
-            >
-              {projects.map((project, index) => {
-                return (
-                  <SwiperSlide key={index} className="w-full">
-                    <div className="h-[520px] relative group flex justify-center items-center bg-pink-50/20 rounded-lg overflow-hidden">
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={project.image}
-                          fill
-                          className="object-cover rounded-lg"
-                          style={{ objectPosition: "center 30%" }}
-                          alt={project.title}
-                          priority={index === 0}
-                        />
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
-              <WorkSliderBtns
-                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
-              />
-            </Swiper>
+
+            {/* Main Editor Area */}
+            <div className="flex-1 flex flex-col overflow-hidden bg-[#0a0a0f]">
+              {/* Editor Tabs */}
+              <div className="flex items-center justify-between border-b border-white/10 bg-[#030305] px-4 py-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-accent-cyan text-[9px] font-bold border border-accent-cyan/20 px-1 rounded bg-accent-cyan/5 shrink-0">JSX</span>
+                  <span className="font-mono text-xs text-white">{activeProject.file}</span>
+                </div>
+                <div className="flex gap-2">
+                  <a href={activeProject.github} target="_blank" rel="noreferrer" className="flex items-center justify-center rounded-lg border border-white/10 bg-white/[0.02] p-1.5 text-zinc-400 hover:border-accent hover:text-accent transition-colors" title="GitHub">
+                    <BsGithub />
+                  </a>
+                  {activeProject.live && (
+                    <a href={activeProject.live} target="_blank" rel="noreferrer" className="flex items-center justify-center rounded-lg border border-white/10 bg-white/[0.02] p-1.5 text-zinc-400 hover:border-accent hover:text-accent transition-colors" title="Live Site">
+                      <BsArrowUpRight />
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              {/* Editor Content */}
+              <div className="flex-1 overflow-y-auto p-4 md:p-6 font-mono text-xs leading-relaxed text-zinc-400 flex flex-col md:flex-row gap-6">
+                
+                {/* Code Representation */}
+                <div className="flex-1">
+                  <div className="flex"><span className="w-8 select-none text-zinc-600 text-right pr-4">1</span><span className="text-zinc-500">// Project: {activeProject.title}</span></div>
+                  <div className="flex"><span className="w-8 select-none text-zinc-600 text-right pr-4">2</span><span><span className="text-accent-violet">import</span> {"{ "} <span className="text-white">{activeProject.stack.map(s => s.name).join(", ")}</span> {" }"} <span className="text-accent-violet">from</span> <span className="text-accent-cyan">'@stack'</span>;</span></div>
+                  <div className="flex"><span className="w-8 select-none text-zinc-600 text-right pr-4">3</span></div>
+                  <div className="flex"><span className="w-8 select-none text-zinc-600 text-right pr-4">4</span><span><span className="text-accent-violet">export const</span> <span className="text-accent-cyan">projectDetails</span> = {"{"}</span></div>
+                  <div className="flex"><span className="w-8 select-none text-zinc-600 text-right pr-4">5</span><span>  <span className="text-zinc-300">category</span>: <span className="text-accent-cyan">"{activeProject.category}"</span>,</span></div>
+                  <div className="flex"><span className="w-8 select-none text-zinc-600 text-right pr-4">6</span><span className="whitespace-pre-wrap">  <span className="text-zinc-300">description</span>: <span className="text-[#a5d6ff]">"{activeProject.description}"</span></span></div>
+                  <div className="flex"><span className="w-8 select-none text-zinc-600 text-right pr-4">7</span><span>{"};"}</span></div>
+                </div>
+
+                {/* Visual Preview */}
+                <div className="w-full md:w-1/2 flex-shrink-0">
+                  <div className="relative w-full h-[250px] md:h-full min-h-[300px] rounded-lg overflow-hidden border border-white/10 group">
+                    <div className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
+                    <Image
+                      src={activeProject.image}
+                      fill
+                      className="object-cover"
+                      alt={activeProject.title}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Terminal Footer */}
+              <div className="h-8 border-t border-white/10 bg-[#030305] px-3 font-mono text-[10px] text-zinc-500 flex items-center justify-between select-none">
+                <div className="flex gap-4">
+                  <span className="text-accent">git: main</span>
+                  <span>0 errors, 0 warnings</span>
+                </div>
+                <div className="hidden sm:flex gap-4">
+                  <span>UTF-8</span>
+                  <span>React JSX</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -151,144 +151,120 @@ import { motion } from "framer-motion";
 
 const Resume = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-      }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
-    >
-      <div className="container mx-auto">
-        <Tabs
-          defaultValue="experience"
-          className="flex flex-col xl:flex-row gap-[60px]"
-        >
-          <TabsList className="flex flex-col w-full max-w-[380px] gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
-          </TabsList>
-          <div className="min-h-[70vh] w-full">
-            <TabsContent value="experience" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experience.desription}
-                </p>
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {experience.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-8 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-                        >
-                          <span className="text-accent ">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.position}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
-                          </div>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </ScrollArea>
-              </div>
-            </TabsContent>
-            <TabsContent value="education" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {education.desription}
-                </p>
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {education.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-8 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-                        >
-                          <span className="text-accent ">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.degree}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.institution}</p>
-                          </div>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </ScrollArea>
-              </div>
-            </TabsContent>
-            <TabsContent value="skills" className="w-full h-full">
-              <div className="flex flex-col gap-[30px]">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
+    <section className="py-24 sm:py-32 relative overflow-hidden bg-[#030305]">
+      {/* Background elements */}
+      <div className="absolute top-40 left-0 w-[500px] h-[500px] bg-accent-violet/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-40 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] pointer-events-none" />
 
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                    {" "}
-                    {skills.description}
-                  </p>
-                </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                  {skills.skillList.map((skills, index) => {
-                    return (
-                      <li key={index}>
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                {skills.icon}
-                              </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p className="capitalize">{skills.name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </TabsContent>
-            <TabsContent
-              value="about"
-              className="w-full text-center xl:text-left"
-            >
-              <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 ">
-                  {about.describe}
+      <div className="container mx-auto px-5 xl:px-20 z-10 relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          <p className="font-mono text-sm tracking-wide text-accent uppercase mb-2">The Journey</p>
+          <h2 className="text-4xl xl:text-5xl font-bold text-white tracking-tight max-w-2xl mb-16">
+            From smart logic to <span className="grad-text">scalable infrastructure</span>.
+          </h2>
+        </motion.div>
+
+        <div className="relative mx-auto mt-20 max-w-4xl">
+          {/* Vertical line */}
+          <div className="absolute left-[18px] top-3 h-[calc(100%-24px)] w-px bg-white/10 sm:left-1/2" />
+          
+          <div className="space-y-16 sm:space-y-24">
+            
+            {/* Education Items */}
+            {education.items.map((item, idx) => (
+              <motion.div 
+                key={`edu-${idx}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className={`group relative flex flex-col gap-3 pl-12 sm:w-1/2 sm:pl-0 ${idx % 2 === 0 ? 'sm:pr-12 sm:text-right sm:mr-auto' : 'sm:pl-12 sm:ml-auto'}`}
+              >
+                <span className={`absolute top-1.5 h-4 w-4 rounded-full border-2 transition-all duration-500 left-[11px] bg-[#030305] border-accent-cyan shadow-[0_0_15px_rgba(34,211,238,0.5)] ${idx % 2 === 0 ? 'sm:left-auto sm:-right-2' : 'sm:-left-2'}`} />
+                <span className="font-mono text-3xl font-bold text-zinc-700 group-hover:grad-text transition-all duration-500">
+                  {item.duration}
+                </span>
+                <h3 className="text-lg font-semibold text-white group-hover:text-accent transition-colors">
+                  {item.degree}
+                </h3>
+                <p className="text-sm leading-relaxed text-zinc-400">
+                  {item.institution}
                 </p>
-                <ul className="grid grid-cols-1  gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                  {about.info.map((item, index) => {
-                    return (
-                      <li
-                        key={index}
-                        className="flex items-center justify-center xl:justify-start gap-4"
-                      >
-                        <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-xl">{item.fieldValue}</span>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </TabsContent>
+              </motion.div>
+            ))}
+
+            {/* Experience Items */}
+            {experience.items.map((item, idx) => (
+              <motion.div 
+                key={`exp-${idx}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className={`group relative flex flex-col gap-3 pl-12 sm:w-1/2 sm:pl-0 ${(idx + education.items.length) % 2 === 0 ? 'sm:pr-12 sm:text-right sm:mr-auto' : 'sm:pl-12 sm:ml-auto'}`}
+              >
+                <span className={`absolute top-1.5 h-4 w-4 rounded-full border-2 transition-all duration-500 left-[11px] bg-[#030305] border-accent shadow-[0_0_15px_rgba(0,255,153,0.5)] ${(idx + education.items.length) % 2 === 0 ? 'sm:left-auto sm:-right-2' : 'sm:-left-2'}`} />
+                <span className="font-mono text-3xl font-bold text-zinc-700 group-hover:grad-text transition-all duration-500">
+                  {item.duration}
+                </span>
+                <h3 className="text-lg font-semibold text-white group-hover:text-accent transition-colors">
+                  {item.position}
+                </h3>
+                <p className="text-sm leading-relaxed text-zinc-400">
+                  {item.company}
+                </p>
+              </motion.div>
+            ))}
+            
           </div>
-        </Tabs>
+        </div>
+
+        {/* Skills Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-32 pt-16 border-t border-white/10"
+        >
+          <div className="flex flex-col xl:flex-row gap-12 items-center xl:items-start">
+            <div className="w-full xl:w-1/3 text-center xl:text-left">
+              <h3 className="text-3xl font-bold mb-4">Tech Stack</h3>
+              <p className="text-zinc-400 text-sm leading-relaxed">{skills.description}</p>
+            </div>
+            <div className="w-full xl:w-2/3 grid grid-cols-3 sm:grid-cols-4 gap-4">
+              {skills.skillList.map((skill, index) => (
+                <div key={index} className="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center gap-3 hover:border-accent hover:bg-accent/5 transition-all group">
+                  <div className="text-4xl text-zinc-500 group-hover:text-accent transition-colors">
+                    {skill.icon}
+                  </div>
+                  <span className="text-[10px] uppercase tracking-wider font-mono text-zinc-400 group-hover:text-white">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* About Info Grid */}
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {about.info.map((info, idx) => (
+            <div key={idx} className="bg-[#08080c] border border-white/5 rounded-lg p-4 flex items-center justify-between">
+              <span className="text-zinc-500 text-sm">{info.fieldName}</span>
+              <span className="text-white font-mono text-sm">{info.fieldValue}</span>
+            </div>
+          ))}
+        </motion.div>
+
       </div>
-    </motion.div>
+    </section>
   );
 };
 

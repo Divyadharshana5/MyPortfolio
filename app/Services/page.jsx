@@ -35,48 +35,49 @@ const service = [
 import { motion } from "framer-motion";
 const Service = () => {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center py12 xl:py-0">
-      <div className="container mx-auto">
-        {/* service page */}
+    <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-24 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] -z-10" />
+      <div className="container mx-auto z-10">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+            transition: { delay: 0.2, duration: 0.4, ease: "easeIn" },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {service.map((service, index) => {
+          {service.map((item, index) => {
             return (
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
                 key={index}
-                className="flex-1 flex flex-col justify-center gap-6 group"
+                className="flex-1 flex flex-col justify-between gap-6 group bg-white/[0.02] border border-white/10 hover:border-accent/30 rounded-2xl p-8 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,255,153,0.1)] relative overflow-hidden"
               >
-                <div className="w-full flex justify-between items-center ">
-                  <div
-                    className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover
-                  transition-all duration-500"
-                  >
-                    {service.num}
+                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-accent-cyan opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                
+                <div className="w-full flex justify-between items-center">
+                  <div className="text-5xl font-extrabold text-outline text-transparent group-hover:grad-text transition-all duration-500 font-mono">
+                    {item.num}
                   </div>
                   <Link
-                    href={service.href}
-                    className="w-[70px] h-[70px] rounded-full bg-white
-                  group-hover:bg-accent transition-all duration-500 flex
-                  justify-center items-center hover:-rotate-45"
+                    href={item.href || "#"}
+                    className="w-12 h-12 rounded-full bg-white/5 border border-white/10 group-hover:border-accent group-hover:bg-accent/10 transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                   >
-                    <BsArrowDownRight className="text-primary text-3xl" />
+                    <BsArrowDownRight className="text-white group-hover:text-accent text-xl transition-all" />
                   </Link>
                 </div>
-                <h2
-                  className="text-[42px] font-bold leading-none text-white
-                group-hover:text-accent transition-all duration-500"
-                >
-                  {service.title}
-                </h2>
-                <p className="text-white/60">{service.description}</p>
-                <div className="border-b border-white/20 w-full"></div>
-              </div>
+                <div>
+                  <h2 className="text-2xl font-bold leading-tight text-white mb-4 group-hover:text-accent transition-all duration-500">
+                    {item.title}
+                  </h2>
+                  <p className="text-zinc-400 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </motion.div>
             );
           })}
         </motion.div>

@@ -20,18 +20,28 @@ module.exports = {
       xl: "1200px",
     },
     fontFamily: {
-      primary: "var(--font-jetbrainsMono)",
+      primary: "var(--font-inter)",
+      mono: "var(--font-jetbrainsMono)",
     },
     extend: {
       colors: {
-        primary: "#1c1c22",
+        primary: "#030305",
         accent: {
           DEFAULT: "#00ff99",
           hover: "#00e187",
+          cyan: "#22d3ee",
+          violet: "#7c7cf8",
         },
       },
-      keyframes: {},
-      animation: {},
+      keyframes: {
+        "fade-up": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "fade-up": "fade-up 0.5s ease-out forwards",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

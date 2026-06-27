@@ -4,7 +4,13 @@
 
 @layer base {
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply font-primary bg-primary text-white antialiased leading-loose;
+    background: radial-gradient(circle at 15% 50%, rgba(0, 255, 153, 0.03), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(34, 211, 238, 0.03), transparent 25%),
+      radial-gradient(circle at 50% 80%, rgba(124, 124, 248, 0.03), transparent 25%);
+    background-color: #030305;
+    background-size: cover;
+    background-attachment: fixed;
   }
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
@@ -20,5 +26,16 @@
   }
   .text-outline-hover {
     -webkit-text-stroke: 1px #00ff99;
+  }
+  
+  .grad-text {
+    @apply bg-gradient-to-r from-accent via-accent-cyan to-accent-violet bg-clip-text text-transparent;
+  }
+
+  .cursor-dot {
+    @apply fixed top-0 left-0 w-2 h-2 bg-accent rounded-full pointer-events-none z-[100] transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-75;
+  }
+  .cursor-ring {
+    @apply fixed top-0 left-0 w-8 h-8 border-2 border-accent/50 rounded-full pointer-events-none z-[100] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-out flex items-center justify-center;
   }
 }
