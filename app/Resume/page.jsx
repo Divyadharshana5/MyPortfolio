@@ -60,7 +60,7 @@ const experience = {
     
     {
       company: "IIT Jammu",
-      position: "Smart India Hackathon",
+      position: "Smart India Hackathon Finalist",
       duration: "Winter-2024",
     },
   ],
