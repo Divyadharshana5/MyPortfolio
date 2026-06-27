@@ -56,6 +56,102 @@ const projects = [
     github: "https://github.com/Divyadharshana5/Travel-website.git",
     file: "TravelWebsite.jsx"
   },
+  {
+    num: "04",
+    category: "Fullstack",
+    title: "Bookstore MERN Stack",
+    description:
+      "A complete MERN stack eCommerce application tailored for bookstores. It allows users to browse, purchase, and manage books. Built with a robust backend using MongoDB, Express, and Node.js, combined with a dynamic React frontend.",
+    stack: [{ name: "React" }, { name: "Node.js" }, { name: "MongoDB" }, { name: "Express" }],
+    image: "/react2.png",
+    live: "https://bookstore-mern-stack-mu.vercel.app",
+    github: "https://github.com/Divyadharshana5/BOOKSTORE-MERN-STACK",
+    file: "BookStore.jsx"
+  },
+  {
+    num: "05",
+    category: "Frontend",
+    title: "Agri Website",
+    description:
+      "A dedicated agricultural website built with JavaScript, focusing on responsive design and interactive elements for modern farming solutions. It provides an intuitive interface for agricultural resources and tools.",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+    image: "/react1.png",
+    live: "",
+    github: "https://github.com/Divyadharshana5/Agri-website",
+    file: "AgriWebsite.jsx"
+  },
+  {
+    num: "06",
+    category: "Backend",
+    title: "CRUD Java",
+    description:
+      "A backend application demonstrating complete CRUD (Create, Read, Update, Delete) operations. Built with Java, it showcases robust architectural patterns and database connectivity.",
+    stack: [{ name: "Java" }, { name: "SQL" }],
+    image: "/react3.png",
+    live: "",
+    github: "https://github.com/Divyadharshana5/Crud-java",
+    file: "CrudJava.java"
+  },
+  {
+    num: "07",
+    category: "Final Year Project",
+    title: "Saferide Guardian",
+    description:
+      "My Final Year Project focused on safety and security. Saferide Guardian provides real-time tracking, monitoring, and emergency response features to ensure user safety during transit.",
+    stack: [{ name: "React" }, { name: "Node.js" }, { name: "MongoDB" }],
+    image: "/react2.png",
+    live: "",
+    github: "https://github.com/Divyadharshana5/Saferide-Guardian",
+    file: "SaferideGuardian.jsx"
+  },
+  {
+    num: "08",
+    category: "API",
+    title: "Movie Areas API",
+    description:
+      "A robust RESTful API built for managing and retrieving movie information efficiently. Features secure endpoints and fast response times.",
+    stack: [{ name: "JavaScript" }, { name: "Node.js" }, { name: "Express" }],
+    image: "/react1.png",
+    live: "https://movieareas-api-test.vercel.app",
+    github: "https://github.com/Divyadharshana5/movieareas-api",
+    file: "MovieAPI.js"
+  },
+  {
+    num: "09",
+    category: "Fullstack",
+    title: "AgriVerity",
+    description:
+      "An innovative agricultural solution designed to ensure product verity, transparency, and traceability from farm to table.",
+    stack: [{ name: "TypeScript" }, { name: "React" }, { name: "Node.js" }],
+    image: "/react2.png",
+    live: "",
+    github: "https://github.com/Divyadharshana5/AgriVerity",
+    file: "AgriVerity.tsx"
+  },
+  {
+    num: "10",
+    category: "Fullstack",
+    title: "Full-Stack Toolkit",
+    description:
+      "A comprehensive collection of full-stack development implementations showcasing best practices in end-to-end architecture.",
+    stack: [{ name: "JavaScript" }, { name: "MongoDB" }, { name: "Express" }],
+    image: "/react3.png",
+    live: "",
+    github: "https://github.com/Divyadharshana5/Full-stack",
+    file: "FullStack.jsx"
+  },
+  {
+    num: "11",
+    category: "Frontend",
+    title: "Ice Cream Parlour",
+    description:
+      "A delightful and interactive website for an ice cream parlour featuring vibrant designs, smooth animations, and responsive layouts.",
+    stack: [{ name: "JavaScript" }, { name: "HTML 5" }, { name: "CSS 3" }],
+    image: "/react1.png",
+    live: "https://ice-cream-parlour-website-six.vercel.app",
+    github: "https://github.com/Divyadharshana5/Ice_cream-parlour-website",
+    file: "IceCream.js"
+  },
 ];
 
 export default function WorkPage() {
