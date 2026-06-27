@@ -88,12 +88,17 @@ const education = {
     },
     {
       institution: "Jaya Engineering College",
-      degree: "BE-CSE",
+      degree: "BE-CSE(8.61 CGPA)",
       duration: "2022-2026",
     },
     {
+      institution: "Jaya Engineering College",
+      degree: "ME-CSE",
+      duration: "2026-2028",
+    },
+    {
       institution: "Startup",
-      degree: "Frontend Developer Intern",
+      degree: "Full Stack Developer",
       duration: "2025-Present",
     },
   ],
