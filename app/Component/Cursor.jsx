@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { motion, useMotionValue } from "framer-motion";
+import { motion, motionValue } from "framer-motion";
 
 const NUM_DOTS = 15;
 
@@ -37,8 +37,8 @@ function SnakeDot({ index, cursorX, cursorY, isHovering }) {
 export default function Cursor() {
   const [isHovering, setIsHovering] = useState(false);
   
-  const xs = useRef(Array.from({ length: NUM_DOTS }, () => useMotionValue(-100))).current;
-  const ys = useRef(Array.from({ length: NUM_DOTS }, () => useMotionValue(-100))).current;
+  const xs = useRef(Array.from({ length: NUM_DOTS }, () => motionValue(-100))).current;
+  const ys = useRef(Array.from({ length: NUM_DOTS }, () => motionValue(-100))).current;
   
   const history = useRef([]);
 

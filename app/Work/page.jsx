@@ -230,7 +230,7 @@ export default function WorkPage() {
                 
                 {/* Code Representation */}
                 <div className="flex-1">
-                  <div className="flex"><span className="w-8 select-none text-zinc-600 text-right pr-4">1</span><span className="text-zinc-500">// Project: {activeProject.title}</span></div>
+                  <div className="flex"><span className="w-8 select-none text-zinc-600 text-right pr-4">1</span><span className="text-zinc-500">{"//"} Project: {activeProject.title}</span></div>
                   <div className="flex"><span className="w-8 select-none text-zinc-600 text-right pr-4">2</span><span><span className="text-accent-violet">import</span> {"{ "} <span className="text-white">{activeProject.stack.map(s => s.name).join(", ")}</span> {" }"} <span className="text-accent-violet">from</span> <span className="text-accent-cyan">'@stack'</span>;</span></div>
                   <div className="flex"><span className="w-8 select-none text-zinc-600 text-right pr-4">3</span></div>
                   <div className="flex"><span className="w-8 select-none text-zinc-600 text-right pr-4">4</span><span><span className="text-accent-violet">export const</span> <span className="text-accent-cyan">projectDetails</span> = {"{"}</span></div>
