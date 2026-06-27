@@ -3,20 +3,50 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
+const NUM_DOTS = 10;
+
+function SnakeDot({ index, cursorX, cursorY, isHovering }) {
+  const stiffness = Math.max(100, 600 - index * 50); 
+  const mass = 0.1 + index * 0.05;
+  const damping = 15 + index * 2;
+  
+  const springX = useSpring(cursorX, { stiffness, mass, damping });
+  const springY = useSpring(cursorY, { stiffness, mass, damping });
+  
+  const size = Math.max(4, 24 - index * 2); 
+  const offset = size / 2;
+  
+  return (
+    <motion.div
+      className="hidden md:block pointer-events-none z-[10000] fixed top-0 left-0 rounded-full mix-blend-difference"
+      style={{
+        x: springX,
+        y: springY,
+        width: size,
+        height: size,
+        marginLeft: -offset,
+        marginTop: -offset,
+        backgroundColor: "#00ff99",
+        opacity: 1 - (index * 0.08),
+      }}
+      animate={{
+        scale: isHovering && index === 0 ? 1.8 : isHovering ? 1.2 : 1,
+      }}
+      transition={{ duration: 0.2 }}
+    />
+  );
+}
+
 export default function Cursor() {
   const [isHovering, setIsHovering] = useState(false);
   
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
   
-  const springConfig = { damping: 20, stiffness: 400, mass: 0.2 };
-  const cursorXSpring = useSpring(cursorX, springConfig);
-  const cursorYSpring = useSpring(cursorY, springConfig);
-
   useEffect(() => {
     const moveCursor = (e) => {
-      cursorX.set(e.clientX - 16);
-      cursorY.set(e.clientY - 16);
+      cursorX.set(e.clientX);
+      cursorY.set(e.clientY);
     };
     
     const handleMouseOver = (e) => {
@@ -43,26 +73,15 @@ export default function Cursor() {
 
   return (
     <>
-      <motion.div
-        className="cursor-ring hidden md:flex pointer-events-none z-[9999] fixed top-0 left-0 mix-blend-difference"
-        style={{
-          x: cursorXSpring,
-          y: cursorYSpring,
-        }}
-        animate={{
-          scale: isHovering ? 1.5 : 1,
-          backgroundColor: isHovering ? "rgba(0,255,153,0.1)" : "transparent",
-          borderColor: isHovering ? "rgba(0,255,153,0)" : "#00ff99",
-        }}
-        transition={{ duration: 0.2 }}
-      />
-      <motion.div
-        className="cursor-dot hidden md:block pointer-events-none z-[10000] fixed top-0 left-0 mix-blend-difference"
-        style={{
-          x: useSpring(cursorX, { ...springConfig, stiffness: 800, mass: 0.1 }),
-          y: useSpring(cursorY, { ...springConfig, stiffness: 800, mass: 0.1 }),
-        }}
-      />
+      {Array.from({ length: NUM_DOTS }).map((_, i) => (
+        <SnakeDot 
+          key={i} 
+          index={i} 
+          cursorX={cursorX} 
+          cursorY={cursorY} 
+          isHovering={isHovering} 
+        />
+      ))}
     </>
   );
 }
