@@ -31,6 +31,13 @@ const service = [
       "Deployed apps using Vercel, Render, and Netlify with optimized builds and CI/CD workflows. Applied lazy loading, bundle analysis, and Lighthouse audits to enhance speed & SEO. Focused on HTTPS, JWT security, and 404 fallback routing.",
     href: "",
   },
+  {
+    num: "05",
+    title: "Enterprise Backend & Full-Stack Solutions",
+    description:
+      "Architecting robust enterprise applications using Java and Spring Boot. Building scalable, end-to-end applications with the complete MERN Stack. Proficient in database design using both SQL and MongoDB, and managing robust version control workflows via GitHub.",
+    href: "",
+  },
 ];
 import { motion } from "framer-motion";
 const Service = () => {
