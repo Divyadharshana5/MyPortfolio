@@ -7,11 +7,12 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaFigma,
   FaNodeJs,
+  FaJava,
+  FaGithub,
 } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiMongodb, SiSpringboot, SiMysql } from "react-icons/si";
 
 const about = {
   title: "About me",
@@ -132,8 +133,24 @@ const skills = {
       name: "node.js",
     },
     {
-      icon: <FaFigma />,
-      name: "figma",
+      icon: <FaJava />,
+      name: "Java",
+    },
+    {
+      icon: <SiMysql />,
+      name: "SQL",
+    },
+    {
+      icon: <SiMongodb />,
+      name: "MongoDB",
+    },
+    {
+      icon: <FaGithub />,
+      name: "GitHub",
+    },
+    {
+      icon: <SiSpringboot />,
+      name: "Spring Boot",
     },
   ],
 };
