@@ -40,6 +40,10 @@ const Contact = () => {
   const [formData, setFormData] = React.useState({
     firstname: "",
     lastname: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
   });
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -59,6 +63,14 @@ const Contact = () => {
       setResult("");
       alert("Form Submitted Successfully");
       event.target.reset();
+      setFormData({
+        firstname: "",
+        lastname: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
     } else {
       console.log("Error", data);
       alert(data.message);
@@ -119,7 +131,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                 />
                 <Input
-                  type="number"
+                  type="tel"
                   name="phone"
                   placeholder="Phone Number"
                   value={formData.phone}
@@ -127,6 +139,7 @@ const Contact = () => {
                 />
               </div>
               <Select
+                name="service"
                 onValueChange={(value) =>
                   setFormData((prev) => ({ ...prev, service: value }))
                 }
@@ -148,7 +161,7 @@ const Contact = () => {
               </Select>
               <Textarea
                 name="message"
-                classname="h-[200px]"
+                className="h-[200px]"
                 placeholder="Type your message here."
                 value={formData.message}
                 onChange={handleInputChange}

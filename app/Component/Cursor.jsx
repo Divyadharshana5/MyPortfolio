@@ -6,13 +6,13 @@ import { motion, motionValue } from "framer-motion";
 const NUM_DOTS = 15;
 
 function SnakeDot({ index, cursorX, cursorY, isHovering }) {
-  const size = Math.max(4, 24 - index * 1.2); 
+  const size = Math.max(4, 24 - index * 1.2);
   const offset = size / 2;
-  
+
   // Calculate a vibrant color based on the dot's index
   const hue = (index * 25) % 360; // Spread colors across the spectrum
   const color = `hsl(${hue}, 100%, 50%)`;
-  
+
   return (
     <motion.div
       className="hidden md:block pointer-events-none z-[10000] fixed top-0 left-0 rounded-full mix-blend-difference"
@@ -36,10 +36,10 @@ function SnakeDot({ index, cursorX, cursorY, isHovering }) {
 
 export default function Cursor() {
   const [isHovering, setIsHovering] = useState(false);
-  
+
   const xs = useRef(Array.from({ length: NUM_DOTS }, () => motionValue(-100))).current;
   const ys = useRef(Array.from({ length: NUM_DOTS }, () => motionValue(-100))).current;
-  
+
   const history = useRef([]);
 
   useEffect(() => {
@@ -50,13 +50,13 @@ export default function Cursor() {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
     };
-    
+
     const update = () => {
       // Always push the current mouse position to history to create the trail
       history.current.unshift({ x: mouse.x, y: mouse.y });
 
       const spacing = 3; // frames between each dot
-      
+
       // Limit history array length
       if (history.current.length > NUM_DOTS * spacing) {
         history.current.length = NUM_DOTS * spacing;
@@ -101,12 +101,12 @@ export default function Cursor() {
   return (
     <>
       {Array.from({ length: NUM_DOTS }).map((_, i) => (
-        <SnakeDot 
-          key={i} 
-          index={i} 
-          cursorX={xs[i]} 
-          cursorY={ys[i]} 
-          isHovering={isHovering} 
+        <SnakeDot
+          key={i}
+          index={i}
+          cursorX={xs[i]}
+          cursorY={ys[i]}
+          isHovering={isHovering}
         />
       ))}
     </>

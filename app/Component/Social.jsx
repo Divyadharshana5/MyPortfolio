@@ -1,36 +1,32 @@
-"use client";
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import Link from "next/link";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
-export default function Social() {
+const socials = [
+  { icon: <FaGithub />, path: "https://github.com/Divyadharshana5", name: "GitHub" },
+  { icon: <FaLinkedinIn />, path: "https://linkedin.com/in/divyadharshana5", name: "LinkedIn" },
+  { icon: <SiGmail />, path: "mailto:divyadharshana3@gmail.com", name: "Email" },
+];
+
+const Social = ({ containerStyles, iconStyles }) => {
   return (
-    <div className="flex gap-4">
-      <a
-        href="https://github.com/Divyadharshana5"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub"
-        className="text-white hover:text-green-400 transition-colors duration-300"
-      >
-        <FaGithub size={32} />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/divyadharshana5"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn"
-        className="text-white hover:text-green-400 transition-colors duration-300"
-      >
-        <FaLinkedinIn size={32} />
-      </a>
-      <a
-        href="https://twitter.com/YOUR_TWITTER_USERNAME"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Twitter"
-        className="text-white hover:text-green-400 transition-colors duration-300"
-      >
-        <FaTwitter size={32} />
-      </a>
+    <div className={containerStyles}>
+      {socials.map((item, index) => {
+        return (
+          <Link
+            key={index}
+            href={item.path}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={iconStyles}
+            aria-label={item.name}
+          >
+            {item.icon}
+          </Link>
+        );
+      })}
     </div>
   );
-}
+};
+
+export default Social;

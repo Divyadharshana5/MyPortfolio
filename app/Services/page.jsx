@@ -64,7 +64,7 @@ const Service = () => {
                 className="flex-1 flex flex-col justify-between gap-6 group bg-white/[0.02] border border-white/10 hover:border-accent/30 rounded-2xl p-8 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,255,153,0.1)] relative overflow-hidden"
               >
                 <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-accent-cyan opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                
+
                 <div className="w-full flex justify-between items-center">
                   <div className="text-5xl font-extrabold text-outline text-transparent group-hover:grad-text transition-all duration-500 font-mono">
                     {item.num}

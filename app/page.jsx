@@ -17,14 +17,14 @@ const Home = () => {
   };
 
   return (
-    <section className="relative min-h-[100svh] flex items-center xl:px-20 px-5 pt-20 overflow-hidden">
+    <section className="relative flex items-center px-5 py-4 xl:px-20 xl:py-6 overflow-hidden">
       {/* Background gradients */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[100px] -z-10 animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-violet/20 rounded-full blur-[100px] -z-10 animate-pulse delay-700" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-accent-cyan/10 rounded-full blur-[120px] -z-10" />
 
       <div className="w-full">
-        <div className="flex flex-col xl:flex-row items-center xl:gap-14 justify-between xl:py-24">
+        <div className="flex flex-col xl:flex-row items-center xl:gap-10 justify-between">
           <div className="text-center flex xl:text-left flex-col gap-6 z-10 w-full xl:w-2/3">
             <span className="text-accent font-mono text-sm tracking-wide animate-fade-up" style={{ animationDelay: '0ms' }}>
               Divyadharshana · Fullstack Developer → Tech Explorer
@@ -67,7 +67,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="animate-fade-up z-10 xl:w-1/3" style={{ animationDelay: '250ms' }}>
             <div className="relative mx-auto w-full max-w-sm">
               <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-accent/30 to-accent-cyan/30 blur-2xl z-0"></div>
@@ -77,7 +77,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="animate-fade-up mt-10" style={{ animationDelay: '500ms' }}>
           <Stats />
         </div>

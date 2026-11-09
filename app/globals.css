@@ -27,7 +27,7 @@
   .text-outline-hover {
     -webkit-text-stroke: 1px #00ff99;
   }
-  
+
   .grad-text {
     @apply bg-gradient-to-r from-accent via-accent-cyan to-accent-violet bg-clip-text text-transparent;
   }

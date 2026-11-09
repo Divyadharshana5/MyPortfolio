@@ -170,7 +170,7 @@ export default function WorkPage() {
         </div>
 
         <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#08080c] shadow-2xl flex flex-col h-[700px] animate-fade-up" style={{ animationDelay: '200ms' }}>
-          
+
           {/* IDE Header */}
           <div className="flex h-10 items-center justify-between border-b border-white/10 bg-[#030305] px-4 select-none">
             <div className="flex items-center gap-2">
@@ -227,7 +227,7 @@ export default function WorkPage() {
 
               {/* Editor Content */}
               <div className="flex-1 overflow-y-auto p-4 md:p-6 font-mono text-xs leading-relaxed text-zinc-400 flex flex-col md:flex-row gap-6">
-                
+
                 {/* Code Representation */}
                 <div className="flex-1">
                   <div className="flex"><span className="w-8 select-none text-zinc-600 text-right pr-4">1</span><span className="text-zinc-500">{"//"} Project: {activeProject.title}</span></div>

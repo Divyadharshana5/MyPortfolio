@@ -28,7 +28,7 @@ const about = {
       fieldName: "Experience",
       fieldValue: "Fresher",
     },
-    
+
     {
       fieldName: "Nationality",
       fieldValue: "Indian",
@@ -54,7 +54,7 @@ const experience = {
   desription:
     "Final-year student at JEC, gaining hands-on experience by working on real-time frontend projects. Building responsive user interfaces using React.js, Tailwind CSS, and integrating APIs to deliver smooth user experiences in a fast-paced startup environment.",
   items: [
-    
+
     {
       company: "IIT Jammu",
       position: "Smart India Hackathon Finalist",
@@ -200,12 +200,12 @@ const Resume = () => {
         <div className="relative mx-auto mt-20 max-w-4xl">
           {/* Vertical line */}
           <div className="absolute left-[18px] top-3 h-[calc(100%-24px)] w-px bg-white/10 sm:left-1/2" />
-          
+
           <div className="space-y-16 sm:space-y-24">
-            
+
             {/* Education Items */}
             {education.items.map((item, idx) => (
-              <motion.div 
+              <motion.div
                 key={`edu-${idx}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -228,7 +228,7 @@ const Resume = () => {
 
             {/* Experience Items */}
             {experience.items.map((item, idx) => (
-              <motion.div 
+              <motion.div
                 key={`exp-${idx}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -251,7 +251,7 @@ const Resume = () => {
 
             {/* Extracurricular Items */}
             {extracurricular.items.map((item, idx) => (
-              <motion.div 
+              <motion.div
                 key={`extra-${idx}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -271,12 +271,12 @@ const Resume = () => {
                 </p>
               </motion.div>
             ))}
-            
+
           </div>
         </div>
 
         {/* Skills Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
